@@ -33,7 +33,7 @@ public class FileUtils {
             MessageUtils.showMessage("Se cargaron "+webPages.size()+" registros de páginas");
             return webPages;
         }catch(IOException e){
-            MessageUtils.showError("Ocurrió un error al cargar los datos del archivo ${file}");
+            MessageUtils.showError("Ocurrió un error al cargar los datos del archivo "+file);
         }
         return null;
     }

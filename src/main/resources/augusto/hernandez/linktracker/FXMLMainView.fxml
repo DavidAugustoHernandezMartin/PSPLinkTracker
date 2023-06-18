@@ -18,7 +18,7 @@
             <MenuItem fx:id="menuItemExit" mnemonicParsing="false" onAction="#exit" text="Exit" />
          </Menu>
          <Menu mnemonicParsing="false" text="Process">
-            <MenuItem mnemonicParsing="false" text="Start" />
+            <MenuItem fx:id="menuItemStart" mnemonicParsing="false" onAction="#scrapWeb" text="Start" />
             <MenuItem mnemonicParsing="false" text="Clear" />
          </Menu>
       </MenuBar>
