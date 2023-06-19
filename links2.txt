@@ -1,0 +1,3 @@
+HashMap (Java SE 20 & JDK 20);https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/HashMap.html
+ProtonDB | Gaming know-how from the Linux and Steam Deck community;https://www.protondb.com/
+Desarrolladores de Android  |  Android Developers;https://developer.android.com/?hl=es-419

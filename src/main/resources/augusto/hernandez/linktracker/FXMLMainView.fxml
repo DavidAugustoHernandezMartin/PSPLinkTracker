@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="augusto.hernandez.linktracker.FXMLMainViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="augusto.hernandez.linktracker.FXMLMainViewController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
          <Menu mnemonicParsing="false" text="File">
@@ -24,7 +24,7 @@
       </MenuBar>
    </top>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="773.0" prefWidth="210.0" BorderPane.alignment="CENTER">
          <VBox layoutX="25.0" layoutY="37.0" prefHeight="300.0" prefWidth="150.0">
             <VBox prefHeight="100.0" prefWidth="100.0">
                <Label text="Total Pages:">
@@ -66,9 +66,9 @@
       </AnchorPane>
    </center>
    <left>
-      <ListView fx:id="listViewFuentes" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <ListView fx:id="listViewFuentes" prefHeight="773.0" prefWidth="348.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <ListView fx:id="listViewLinks" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <ListView fx:id="listViewLinks" prefHeight="773.0" prefWidth="624.0" BorderPane.alignment="CENTER" />
    </right>
 </BorderPane>
