@@ -19,7 +19,9 @@ public class WebPage {
         this.nombre = nombre;
         this.url = url;
     }
-
+    public void clear(){
+        links.clear();
+    }
     public String getNombre() {
         return nombre;
     }

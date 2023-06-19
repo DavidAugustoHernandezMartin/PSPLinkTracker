@@ -100,6 +100,7 @@ public class FXMLMainViewController {
 
     @FXML
     private void scrapWeb() {
+        labelTotalPagesNumber.setText(String.valueOf(listViewFuentes.getItems().size()));
         executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         List<WebPage> selectedWebPages = listViewFuentes.getItems();
         if (!selectedWebPages.isEmpty()) {
@@ -157,14 +158,17 @@ public class FXMLMainViewController {
                     String processed = resultMap.get("processed");
                     String totalLinks = resultMap.get("total links");
                     String done = resultMap.get("All done");
+                    addProcessed(processed);
+                    addTotalLinks(totalLinks);
                     if(done.equals("DONE")){
                         scheduledService.cancel();
                         executorService.shutdown();
+                        WebPage value = listViewFuentes.getSelectionModel().getSelectedItem();
+                            if (value != null) {
+                                listViewLinks.setItems(FXCollections.observableList(value.getLinks()));
+                            }
                         MessageUtils.showMessage("Links cargados");
                     }
-                    // Aquí actualizas las propiedades de texto de tus Labels
-                    addProcessed(processed);
-                    addTotalLinks(totalLinks);
                 }
             });
             // Configurar el ScheduledService para ejecutarse una vez después de un breve retardo
@@ -173,6 +177,18 @@ public class FXMLMainViewController {
             scheduledService.start();
         }
 
+    }
+
+    @FXML
+    protected void clear(ActionEvent actionEvent) {
+        listViewFuentes.getItems().forEach(WebPage::clear);
+        listViewLinks.setItems(FXCollections.observableList(new ArrayList<>()));
+        total_links.set(0);
+        processed.set(0);
+        addTotalLinks("0");
+        addProcessed("0");
+        labelTotalPagesNumber.setText("0");
+        MessageUtils.showMessage("Datos borrados");
     }
 }
 

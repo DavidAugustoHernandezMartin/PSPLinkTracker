@@ -19,7 +19,7 @@
          </Menu>
          <Menu mnemonicParsing="false" text="Process">
             <MenuItem fx:id="menuItemStart" mnemonicParsing="false" onAction="#scrapWeb" text="Start" />
-            <MenuItem mnemonicParsing="false" text="Clear" />
+            <MenuItem fx:id="menuItemClear" mnemonicParsing="false" onAction="#clear" text="Clear" />
          </Menu>
       </MenuBar>
    </top>
